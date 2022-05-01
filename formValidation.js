@@ -1,14 +1,14 @@
-function validate() {
-  var firstname = document.getElementById("firstname");
-  var lastname = document.getElementById("lastname");
-  var company = document.getElementById("company");
-  var email = document.getElementById("email");
-  var phone = document.getElementById("phone");
-  var country = document.getElementById("country");
-  var sex = document.getElementById("sex");
-  var language = document.getElementById("language");
-  var term = document.getElementById("term");
+var firstname = document.getElementById("firstname");
+var lastname = document.getElementById("lastname");
+var company = document.getElementById("company");
+var email = document.getElementById("email");
+var phone = document.getElementById("phone");
+var country = document.getElementById("country");
+var sex = document.getElementById("sex");
+var language = document.getElementById("language");
+var term = document.getElementById("term");
 
+function validate() {
   if (firstname.value.length <= 0) {
     alert("Name is required");
     fname.focus();
