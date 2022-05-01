@@ -110,11 +110,6 @@
                 company.focus();
                 return false;
             }
-            if (email.value.length <= 0) {
-                alert("Email is required");
-                email.focus();
-                return false;
-            }
             if (country.value.length <= 0) {
                 alert("country Id is required");
                 email.focus();
@@ -137,9 +132,22 @@
             }
             if (term.checked) {
                 term = true;
-            } else {
+            }
+
+            else {
                 alert("Tick the terms and conditions");
             }
+            const email_validator = (email) => {
+                let emailValue = email
+                let atIndex = emailValue.indexOf('@');
+                let dotIndex = emailValue.lastIndexOf(".");
+                if (atIndex < 1 || dotIndex >= (emailValue.length - 2) || (dotIndex - atIndex) < 3) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
         }
 
     </script>
