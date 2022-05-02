@@ -15,70 +15,68 @@
         <div class="container">
 
             <form action="" method="" onsubmit="validate()">
-                <div class="form">
-                    <table>
-                        <tr>
-                            <td><label for="fullname">Full Name</label></td>
-                            <td><input type="text" name="firstname" id="firstname" placeholder="First Name"></td>
-                            <td><input type="text" name="lastname" id="lastname" placeholder="Last Name"></td>
-                        </tr>
-                        <tr>
+                <table>
+                    <tr>
+                        <td><label for="fullname">Full Name</label></td>
+                        <td><input type="text" name="firstname" id="firstname" placeholder="First Name"></td>
+                        <td><input type="text" name="lastname" id="lastname" placeholder="Last Name"></td>
+                    </tr>
+                    <tr>
 
-                            <td><label for="company">Company</label></td>
-                            <td><input type="text" name="company" id="company" placeholder="Your company name"></td>
-                        </tr>
-                        <tr>
+                        <td><label for="company">Company</label></td>
+                        <td><input type="text" name="company" id="company" placeholder="Your company name"></td>
+                    </tr>
+                    <tr>
 
-                            <td><label for="email">Email</label></td>
-                            <td><input type="email" name="email" id="email" placeholder="email@example.com"></td>
-                        <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" name="email" id="email" placeholder="email@example.com"></td>
+                    <tr>
 
-                            <td><label for="phonenumber">Phone number</label></td>
-                            <td><input type="text" name="phonenumber" id="" size="4" maxlength="4" placeholder="+xxx">
-                                <input type="text" name="phonenumber" id="phone" size="10" maxlength="10"
-                                    placeholder="98xxxxxxxx">
-                            </td>
-                        </tr>
-                        <tr>
+                        <td><label for="phonenumber">Phone number</label></td>
+                        <td><input type="text" name="phonenumber" id="" size="4" maxlength="4" placeholder="+xxx">
+                            <input type="text" name="phonenumber" id="phone" size="10" maxlength="10"
+                                placeholder="98xxxxxxxx">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="country">Country</label></td>
+                        <td><select name="country" id="country">
+                                <option value="" disabled selected>Click to choose</option>
+                                <option value="nepal">Nepal</option>
+                                <option value="usa">USA</option>
+                                <option value="uk">UK</option>
+                                <option value="australia">Australia</option>
+                            </select></td>
+                    </tr>
+                    <tr>
 
-                            <td><label for="country">Country</label></td>
-                            <td><select name="country" id="country">
-                                    <option value="" disabled selected>Click to choose</option>
-                                    <option value="nepal">Nepal</option>
-                                    <option value="usa">USA</option>
-                                    <option value="uk">UK</option>
-                                    <option value="australia">Australia</option>
-                                </select></td>
-                        </tr>
-                        <tr>
+                        <td><label for="sex">Sex</label></td>
+                        <td><input type="radio" name="sex" id="sex">Male</td>
+                        <td><input type="radio" name="sex" id="sex">Female </td>
+                    </tr>
+                    <tr>
 
-                            <td><label for="sex">Sex</label></td>
-                            <td><input type="radio" name="sex" id="sex">Male</td>
-                            <td><input type="radio" name="sex" id="sex">Female </td>
-                        </tr>
-                        <tr>
+                        <td><label for="language">Language</label></td>
+                        <td><input type="checkbox" name="nepali" value="nepali" id="language">Nepali</td>
+                        <td><input type="checkbox" name="sanskrit" value="sanskrit" id="language">Sanskrit</td>
+                        <td><input type="checkbox" name="other" value="other" id="language">Other </td>
+                    </tr>
+                    <tr>
 
-                            <td><label for="language">Language</label></td>
-                            <td><input type="checkbox" name="nepali" value="nepali" id="language">Nepali</td>
-                            <td><input type="checkbox" name="sanskrit" value="sanskrit" id="language">Sanskrit</td>
-                            <td><input type="checkbox" name="other" value="other" id="language">Other </td>
-                        </tr>
-                        <tr>
+                        <td><label for="comment">Comment</label></td>
+                        <td><input type="textarea" name="comment" id="comment" placeholder="Say hello"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="checkbox" name="" id="term">I agree with <a href="#">Terms and
+                                Condition</a> </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="submit">Register</button></td>
 
-                            <td><label for="comment">Comment</label></td>
-                            <td><input type="textarea" name="comment" id="comment" placeholder="Say hello"></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><input type="checkbox" name="" id="term">I agree with <a href="#">Terms and
-                                    Condition</a> </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><button type="submit">Register</button></td>
+                    </tr>
 
-                        </tr>
-                </div>
                 </table>
             </form>
         </div>
@@ -96,12 +94,12 @@
 
         function validate() {
             if (firstname.value.length <= 0) {
-                alert("Name is required");
-                fname.focus();
+                alert("First name is required");
+                firstname.focus();
                 return false;
             }
             if (lastname.value.length <= 0) {
-                alert("Name is required");
+                alert("Last name is required");
                 lastname.focus();
                 return false;
             }
@@ -115,7 +113,7 @@
                 email.focus();
                 return false;
             }
-            if (sex.checked) {
+            if (sex.radio.checked) {
                 sex = true;
             } else {
                 alert("Gender is required!");
@@ -125,7 +123,7 @@
                 phone.focus();
                 return false;
             }
-            if (language.checked) {
+            if (language.checkbox.checked) {
                 language = true;
             } else {
                 alert("Language is required!!");
